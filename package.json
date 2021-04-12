@@ -11,6 +11,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-uuid": "^1.0.2",
+    "faker": "^5.5.2",
+    "miragejs": "^0.1.41",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -38,7 +40,5 @@
     ]
   },
   "devDependencies": {
-    "faker": "^5.5.2",
-    "miragejs": "^0.1.41"
   }
 }

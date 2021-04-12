@@ -19,6 +19,7 @@ function FilterSort() {
             const fastProduct = products.filter(product => product.fastDelivery);
             console.log(fastProduct,"fast product");
             dispatch({type:"initialProduct", payload: [...fastProduct]});
+
         }
         else if(filterBy.outOfStock){
             const outOfStockProduct = products.filter(product => product.inStock);
