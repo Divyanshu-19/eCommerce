@@ -1,6 +1,6 @@
 import "./App.css"
 import { useState } from "react";
-import { Header } from "./components/Header"
+import { Header } from "./components/Header";
 import Products from "./components/Products";
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart";
