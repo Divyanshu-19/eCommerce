@@ -65,7 +65,6 @@ function FilterList(){
 
 function MobileFilterSort() {
     const [route, setRoute] = useState("");
-    console.log(route);
     return (
         <div className="mobile-view">
             <div className="row sortrow">

@@ -1,6 +1,7 @@
 import React from 'react'
 import uuid from "react-uuid";
 import { useUserData } from '../context/dataContext'
+import Header from "./Header";
 
 function Wishlist() {
     const {dispatch, userState} = useUserData();
@@ -26,13 +27,14 @@ function Wishlist() {
 
     return (
         <>
+            <Header />
             {
                 userState.wishlist.map(wish => {
                     return(
                     <div key={uuid()}>
                         <div className="card">
                             <img src={wish.image} alt="" />
-                            <div class="remove" onClick={() => removeFromWishlist(wish)}>X</div>
+                            <div className="remove" onClick={() => removeFromWishlist(wish)}>X</div>
                             <h2>{wish.name}</h2>
                             <p>Here you can place the content of the card</p>
                             <button className="btn round primary-btn" onClick={() => addToCart(wish)}>

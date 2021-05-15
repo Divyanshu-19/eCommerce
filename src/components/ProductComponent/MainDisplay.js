@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import axios from "axios";
 import {useUserData} from "../../context/dataContext";
 import uuid from "react-uuid";
+import {Link} from "react-router-dom";
 
 function MainDisplay({ setRoute }) {
     const { setProducts, dispatch, userState } = useUserData();
@@ -67,16 +68,21 @@ function MainDisplay({ setRoute }) {
                     return(
                         <div key={uuid()}>
                             <div className="card">
+                                
                                 <img src={product.image} alt="" />
                                 <i className="material-icons md-30 wishlist" onClick={() => handleWishListClick(product)}>{isAlreadyInWishlist(product.id)}</i>
+                                <Link to={`/products/${product.id}`} className="link">
                                 <h2>{product.name}</h2>
                                 <p>
                                     Rs. {product.price}<br />
                                     in Stock : {product.inStock.toString()} <br />
                                     fast delievery: {product.fastDelivery.toString()}
                                 </p>
+                                </Link>
+                                <p>
+                                </p>
                                 <button className="btn round primary-btn" onClick={() => handleCartClick(product)}>
-                                    {alreadyInCart(product)?"Go to Cart":"Add To Cart"}
+                                    {alreadyInCart(product)?<Link to={`/cart`} className="link link-white">Go To Cart</Link>:"Add To Cart"}
                                 </button>
                             </div>
                         </div>

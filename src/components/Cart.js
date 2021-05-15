@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react'
-import {useUserData} from '../context/dataContext';
 import uuid from "react-uuid";
+
+import {useUserData} from '../context/dataContext';
+import Header from "./Header";
 
 function Cart() {
     const { userState, dispatch } = useUserData();
@@ -36,6 +38,7 @@ function Cart() {
 
     return (
         <>
+            <Header />
             {
                 userState.cart.map((item, index) => {
                     return(

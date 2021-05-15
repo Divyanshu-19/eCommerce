@@ -5,11 +5,12 @@ const initialState = {
     showProducts:[],
     cart: [],
     wishlist: [],
-    filterSort: {
-        includeOutOfStock: false,
-        includeFastDelievery: false,
-        sortBy: ""
-    }
+    login: false,
+    // filterSort: {
+    //     includeOutOfStock: false,
+    //     includeFastDelievery: false,
+    //     sortBy: ""
+    // }
 };
 
 const ACTION ={
@@ -23,7 +24,8 @@ const ACTION ={
     INITIAL_PRODUCT: "initialProduct",
     TOGGLE_OUT_OF_STOCK: "toggleOutOfStock",
     TOGGLE_FAST_DELIEVERY: "toggleFastDelievery",
-    SORT_BY: "sortBy"
+    SORT_BY: "sortBy",
+    CHANGE_LOGIN: "changeLogin"
 }
 
 // Reducer functions
@@ -196,6 +198,9 @@ function reducer(state, action){
 
         case ACTION.SORT_BY:
             return sortBy(state, action.payload);
+        
+        case ACTION.CHANGE_LOGIN:
+            return {...state, login: !state.login};
 
         default:
             return state;

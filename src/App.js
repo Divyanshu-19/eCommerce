@@ -1,19 +1,28 @@
 import "./App.css"
-import { useState } from "react";
-import { Header } from "./components/Header";
+
+import { Routes, Route, Navigate } from "react-router-dom";
 import Products from "./components/Products";
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart";
+import Home from "./components/Home";
+import ProductDetail from "./components/ProductDetail"
+import NotFound from "./components/NotFound";
+import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
-  const [route, setRoute] = useState("products");
 
   return (
     <>
-      <Header route={route} setRoute={setRoute}/>
-      {route==="products" && <Products setRoute={setRoute} />}
-      {route==="wishlist" && <Wishlist />}
-      {route==="cart" && <Cart />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
+        <PrivateRoute path="/wishlist" element={<Wishlist />} />
+        <PrivateRoute path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }

@@ -184,3 +184,56 @@ h3 {
     width: 45%;
 }
 /* End of horizontal card css */
+
+/* .react-link .material-icons{
+    color: rgb(243, 212, 212);
+}
+
+.react-link.active .material-icons {
+    color: white;
+} */
+
+
+
+.navigation__left-section .react-link,
+.navigation__right-section .react-link {
+    align-self: center;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.navigation__left-section .react-link {
+    padding: 1rem 0.5rem;
+}
+
+.navigation__right-section .react-link {
+    padding: 1rem 2rem;
+}
+
+.navigation__left-section .react-link:hover,
+.navigation__right-section .react-link:hover {
+    background-color: var(--ele-x-darkblue);
+}
+
+.navigation__right-section .react-link:last-child {
+    margin-right: 2rem;
+}
+
+@media screen and (max-width: 720px) {
+    .navigation__right-section .react-link {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.react-link{
+    color: white;
+}
+
+.card .material-icons.md-30.wishlist{
+    z-index: 2;
+}
+
+.link-white{
+    color: white;
+}
