@@ -6,11 +6,11 @@ const initialState = {
     cart: [],
     wishlist: [],
     login: false,
-    // filterSort: {
-    //     includeOutOfStock: false,
-    //     includeFastDelievery: false,
-    //     sortBy: ""
-    // }
+    filterSort: {
+        includeOutOfStock: false,
+        includeFastDelievery: false,
+        sortBy: ""
+    }
 };
 
 const ACTION ={
