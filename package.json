@@ -43,5 +43,4 @@
   },
   "devDependencies": {},
   "build": "CI= react-scripts build"
-
 }
