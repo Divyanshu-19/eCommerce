@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
-import setupMockServer from "./api/mockServer";
+// import setupMockServer from "./api/mockServer";
 import { UserDataProvider } from "./context/dataContext"
 
 // setupMockServer();

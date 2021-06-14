@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import axios from "axios";
 import {useUserData} from "../../context/dataContext";
-import uuid from "react-uuid";
+// import uuid from "react-uuid";
 import {Link, useNavigate} from "react-router-dom";
 
 function MainDisplay({ setRoute }) {

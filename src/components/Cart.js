@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react'
-import uuid from "react-uuid";
+import React, {useEffect} from 'react';
 
 import {useUserData} from '../context/dataContext';
 import Header from "./Header";

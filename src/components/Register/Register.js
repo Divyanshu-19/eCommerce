@@ -1,7 +1,7 @@
 import './Register.css';
 import React, {useState} from 'react'
 import { useUserData } from '../../context/dataContext';
-import { useLocation, useNavigate, Link, Navigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 
 function Register() {
@@ -10,7 +10,7 @@ function Register() {
     const [address, setAddress] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-    const { userState, dispatch } = useUserData();
+    const { dispatch } = useUserData();
     const navigate = useNavigate();
     
     async function handleOnClick(){
