@@ -8,7 +8,7 @@ import {Link, useNavigate} from "react-router-dom";
 function MainDisplay({ setRoute }) {
     const { setProducts, dispatch, userState } = useUserData();
     const navigate = useNavigate()
-    useEffect(() => {
+    useEffect((() => {
         (async function(){
         try{
             const {data: {data}, status} = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/products`)
@@ -22,7 +22,7 @@ function MainDisplay({ setRoute }) {
             console.log(error);
         }
         })()
-    },[]);
+    })(),[]);
 
     function handleWishListClick(product){
         for(let i=0; i<userState.wishlist.length; i++){
