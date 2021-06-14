@@ -6,9 +6,9 @@ import Header from "./Header";
 function Cart() {
     const { userState, dispatch } = useUserData();
 
-    useEffect((() => {
+    useEffect(() => {
         dispatch({type: "insertQtyOfCartitem",});
-    })(),[]);
+    },[]);
 
     function increaseCartQty(item, index){
         dispatch({type: "increaseCartitemQty", payload: {item, index}});
