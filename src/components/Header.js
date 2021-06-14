@@ -15,7 +15,7 @@ function Header(){
                             menu
                         </span>
                     </div>
-                    <Link to="/products" className="react-link link"><h1>Titleee</h1></Link>
+                    <Link to="/products" className="react-link link"><h1>GadgetX</h1></Link>
                 </div>
                 <div className="navigation__right-section">
     

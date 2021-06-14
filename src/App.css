@@ -1,5 +1,9 @@
 @import url(https://elementx-library.netlify.app/style.css);
 
+body {
+    background-color: var(--ele-x-lightblue);
+}
+
 /* CSS Exclusively for eCommerce */
 .row {
     display: flex;

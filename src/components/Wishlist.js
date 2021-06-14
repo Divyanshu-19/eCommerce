@@ -8,7 +8,7 @@ function Wishlist() {
 
     function removeFromWishlist(wish){
         for(let i=0; i<userState.wishlist.length; i++){
-            if(userState.wishlist[i].id===wish.id){
+            if(userState.wishlist[i]._id===wish._id){
                 return dispatch({type:"removeFromWishlist", payload:i});
             }
         }
@@ -18,7 +18,7 @@ function Wishlist() {
         removeFromWishlist(wish);
         let i=0
         for(i=0; i<userState.cart.length; i++){
-            if(userState.cart[i].id===wish.id){
+            if(userState.cart[i]._id===wish._id){
                 return;
             }
         }
@@ -28,15 +28,16 @@ function Wishlist() {
     return (
         <>
             <Header />
+            <div className="maindisplay">
             {
                 userState.wishlist.map(wish => {
                     return(
-                    <div key={uuid()}>
+                    <div key={wish._id}>
                         <div className="card">
-                            <img src={wish.image} alt="" />
+                            <img src={wish.image} alt="" style={{maxHeight: "25rem"}} />
                             <div className="remove" onClick={() => removeFromWishlist(wish)}>X</div>
                             <h2>{wish.name}</h2>
-                            <p>Here you can place the content of the card</p>
+                            <p>{wish.description[0]}<br /> {wish.description[1]}</p>
                             <button className="btn round primary-btn" onClick={() => addToCart(wish)}>
                                 Add To Cart
                             </button>
@@ -45,6 +46,7 @@ function Wishlist() {
                     )
                 })
             }
+            </div>
         </>
     )
 }

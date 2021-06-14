@@ -28,7 +28,7 @@ function Cart() {
     function cartToWishlist(item, index){
         dispatch({type: "removeFromCart", payload: index});
         for(let i=0; i<userState.wishlist.length; i++){
-            if(item.id===userState.wishlist[i].id)
+            if(item._id===userState.wishlist[i]._id)
             {
                 return;
             }
@@ -42,12 +42,12 @@ function Cart() {
             {
                 userState.cart.map((item, index) => {
                     return(
-                        <div className="card-horizontal" key={uuid()}>
+                        <div className="card-horizontal" key={item._id}>
                             <div className="card-horizontal__information">
-                                <img src={item.image} alt=""></img>
+                                <img src={item.image} alt="" style={{maxHeight: "30rem"}}></img>
                                 <div className="card-horizontal__info">
                                     <h2>{item.name}</h2>
-                                    <p>Rs. {item.price}</p>
+                                    <p>Rs. {item.discountedPrice}</p>
                                     <div className="card-horizontal__qty">
                                         <button className="btn" onClick={() => decreaseCartQty(item, index)}>-</button>
                                             {item.qty}

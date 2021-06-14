@@ -7,7 +7,7 @@ import App from './App';
 import setupMockServer from "./api/mockServer";
 import { UserDataProvider } from "./context/dataContext"
 
-setupMockServer();
+// setupMockServer();
 
 ReactDOM.render(
   <React.StrictMode>

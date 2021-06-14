@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {useUserData} from "../../context/dataContext";
 
 
 function FilterSort() {
 
-    const {products, dispatch, userState} = useUserData();
+    const {products, dispatch} = useUserData();
 
     return (
         <div className="filtersort">
